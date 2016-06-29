@@ -85,12 +85,12 @@ class Application(Frame):
         rpsslWindow.mainloop()
 
 class RPS(Frame):
-    options = ["rock", "paper", "scissors"]
+    options = ("rock", "paper", "scissors")
 
     #computer:  # Rock                                  # paper                                     # scissors
-    outcomes = [["You both played rock! It's a tie!",   "Paper covers rock! The computer wins!",     "Rock crushes scissors! You win!"], #R
-                ["Paper covers rock! You win!",     "You both played paper! It's a tie!",       "Scissors cut paper! The computer wins!"], #P
-                ["Rock crushes scissors! The computer wins!", "Scissors cut paper! You win!",   "You both played scissors! It's a tie!"]] #S
+    outcomes = (("You both played rock! It's a tie!",   "Paper covers rock! The computer wins!",     "Rock crushes scissors! You win!"), #R
+                ("Paper covers rock! You win!",     "You both played paper! It's a tie!",       "Scissors cut paper! The computer wins!"), #P
+                ("Rock crushes scissors! The computer wins!", "Scissors cut paper! You win!",   "You both played scissors! It's a tie!")) #S
 
     def __init__(self, parent):
         Frame.__init__(self, parent)
@@ -159,7 +159,7 @@ class RPS(Frame):
 
 
 class RPSSL(Frame):
-    options = ["rock", "paper", "scissors", "Spock", "lizard"]
+    options = ("rock", "paper", "scissors", "Spock", "lizard")
 
     ws = getWorksheet("rpssl.xlsx")
 
