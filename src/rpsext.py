@@ -61,7 +61,7 @@ class Application(Frame):
         rpsWindow = Toplevel()
 
         # modify window
-        rpsWindow.iconbitmap("Rock.ico")
+        rpsWindow.iconbitmap("resources/Rock.ico")
         rpsWindow.title("classic RPS")
         rpsWindow.geometry(str(width) + "x" + str(height))
         rpsWindow.resizable(0, 0)
@@ -71,11 +71,11 @@ class Application(Frame):
         rpsWindow.mainloop()
 
     def rpsslWindow(self):
-        # create rps window
+        # create rpssl window
         rpsslWindow = Toplevel()
 
         # modify window
-        rpsslWindow.iconbitmap("Rock.ico")
+        rpsslWindow.iconbitmap("resources/Rock.ico")
         rpsslWindow.title("Rock, paper, scissors, spock, lizard")
         rpsslWindow.geometry(str(width) + "x" + str(height))
         rpsslWindow.resizable(0, 0)
@@ -103,7 +103,7 @@ class RPS(Frame):
         customFont = tkFont.Font(window, family="Helvetica", size=14)
 
         # image
-        rpsImg = Image.open("rps.png")
+        rpsImg = Image.open("resources/rps.png")
         rpsImage = ImageTk.PhotoImage(rpsImg, master=self.parent)
 
         # widgets
@@ -161,7 +161,7 @@ class RPS(Frame):
 class RPSSL(Frame):
     options = ("rock", "paper", "scissors", "Spock", "lizard")
 
-    ws = getWorksheet("rpssl.xlsx")
+    ws = getWorksheet("resources/rpssl.xlsx")
 
     def __init__(self, parent):
         Frame.__init__(self, parent)
@@ -174,7 +174,7 @@ class RPSSL(Frame):
         customFont = tkFont.Font(window, family="Helvetica", size=12)
 
         # image
-        rpsImg = Image.open("rock paper scissors spock lizard.png")
+        rpsImg = Image.open("resources/rock paper scissors spock lizard.png")
         rpsImage = ImageTk.PhotoImage(rpsImg, master=self.parent)
 
         # widgets
@@ -243,7 +243,7 @@ class RPSSL(Frame):
 window = Tk()
 
 # modify window
-window.iconbitmap("Rock.ico")
+window.iconbitmap("resources/Rock.ico")
 window.title("Rock, paper, scissors: Extended")
 window.geometry(str(width) + "x" + str(height))
 window.resizable(0, 0)
