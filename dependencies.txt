@@ -1,0 +1,4 @@
+Modules required:
+- PIP
+- Openpyxl
+- Tkinter (should already be installed by default)
