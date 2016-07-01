@@ -1,4 +1,4 @@
 Modules required:
-- PIP
+- PIL
 - Openpyxl
 - Tkinter (should already be installed by default)
